@@ -8,9 +8,9 @@ FNAMES = os.listdir(PATH)
 for i, j in enumerate(FNAMES):
     filename, file_extension = os.path.splitext(str(j))
     if file_extension == '.zip':
-        x = zipfile.ZipFile(j)
-        x.extractall(PATH + filename)
-        x.close()
+        file = zipfile.ZipFile(j)
+        file.extractall(PATH + filename)
+        file.close()
         print(filename)
     else:
         continue
